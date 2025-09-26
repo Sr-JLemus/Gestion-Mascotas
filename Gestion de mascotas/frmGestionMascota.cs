@@ -16,5 +16,10 @@ namespace Gestion_de_mascotas
         {
             InitializeComponent();
         }
+
+        private void sALIRToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
