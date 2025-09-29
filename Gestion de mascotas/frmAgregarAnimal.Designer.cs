@@ -158,7 +158,7 @@
             // chkEstado
             // 
             chkEstado.AutoSize = true;
-            chkEstado.Location = new Point(122, 401);
+            chkEstado.Location = new Point(121, 401);
             chkEstado.Name = "chkEstado";
             chkEstado.Size = new Size(99, 24);
             chkEstado.TabIndex = 11;
