@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionMascota));
-            tableLayoutPanel1 = new TableLayoutPanel();
-            pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
             menuStrip1 = new MenuStrip();
             aNIMALESToolStripMenuItem = new ToolStripMenuItem();
             aDOPCIÓNToolStripMenuItem = new ToolStripMenuItem();
@@ -39,58 +38,40 @@
             eVENTOSToolStripMenuItem = new ToolStripMenuItem();
             sALIRToolStripMenuItem = new ToolStripMenuItem();
             toolStripContainer1 = new ToolStripContainer();
+            pictureBox4 = new PictureBox();
+            pictureBox3 = new PictureBox();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            tableLayoutPanel2 = new TableLayoutPanel();
-            pictureBox3 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             menuStrip1.SuspendLayout();
             toolStripContainer1.ContentPanel.SuspendLayout();
             toolStripContainer1.SuspendLayout();
-            tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
-            // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Controls.Add(pictureBox2, 1, 0);
-            tableLayoutPanel1.Controls.Add(pictureBox1, 0, 0);
-            tableLayoutPanel1.Location = new Point(233, 64);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(834, 279);
-            tableLayoutPanel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(3, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(411, 270);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.cuidado_de_mascotas;
-            pictureBox2.Location = new Point(420, 3);
+            pictureBox2.Location = new Point(650, 73);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(411, 270);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(233, 73);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(411, 270);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // menuStrip1
             // 
@@ -101,7 +82,7 @@
             menuStrip1.LayoutStyle = ToolStripLayoutStyle.VerticalStackWithOverflow;
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(207, 804);
+            menuStrip1.Size = new Size(207, 1080);
             menuStrip1.Stretch = false;
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
@@ -160,23 +141,45 @@
             // toolStripContainer1.ContentPanel
             // 
             toolStripContainer1.ContentPanel.AutoScroll = true;
+            toolStripContainer1.ContentPanel.Controls.Add(pictureBox4);
+            toolStripContainer1.ContentPanel.Controls.Add(pictureBox1);
+            toolStripContainer1.ContentPanel.Controls.Add(pictureBox3);
+            toolStripContainer1.ContentPanel.Controls.Add(pictureBox2);
             toolStripContainer1.ContentPanel.Controls.Add(label4);
             toolStripContainer1.ContentPanel.Controls.Add(label3);
             toolStripContainer1.ContentPanel.Controls.Add(label2);
             toolStripContainer1.ContentPanel.Controls.Add(label1);
-            toolStripContainer1.ContentPanel.Controls.Add(tableLayoutPanel2);
             toolStripContainer1.ContentPanel.Controls.Add(menuStrip1);
-            toolStripContainer1.ContentPanel.Controls.Add(tableLayoutPanel1);
-            toolStripContainer1.ContentPanel.Size = new Size(1082, 804);
+            toolStripContainer1.ContentPanel.Size = new Size(1920, 1080);
             toolStripContainer1.Dock = DockStyle.Fill;
             toolStripContainer1.LeftToolStripPanelVisible = false;
             toolStripContainer1.Location = new Point(0, 0);
             toolStripContainer1.Name = "toolStripContainer1";
             toolStripContainer1.RightToolStripPanelVisible = false;
-            toolStripContainer1.Size = new Size(1082, 804);
+            toolStripContainer1.Size = new Size(1920, 1080);
             toolStripContainer1.TabIndex = 2;
             toolStripContainer1.Text = "toolStripContainer1";
             toolStripContainer1.TopToolStripPanelVisible = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(650, 415);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(413, 270);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 1;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(232, 415);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(412, 270);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 0;
+            pictureBox3.TabStop = false;
             // 
             // label4
             // 
@@ -222,46 +225,12 @@
             label1.TabIndex = 3;
             label1.Text = "ANIMALES";
             // 
-            // tableLayoutPanel2
-            // 
-            tableLayoutPanel2.ColumnCount = 2;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Controls.Add(pictureBox3, 0, 0);
-            tableLayoutPanel2.Controls.Add(pictureBox4, 1, 0);
-            tableLayoutPanel2.Location = new Point(233, 413);
-            tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 1;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(837, 277);
-            tableLayoutPanel2.TabIndex = 2;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(3, 3);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(412, 270);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 0;
-            pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(421, 3);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(413, 270);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 1;
-            pictureBox4.TabStop = false;
-            // 
             // frmGestionMascota
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(106, 153, 78);
-            ClientSize = new Size(1082, 804);
+            ClientSize = new Size(1920, 1080);
             Controls.Add(toolStripContainer1);
             FormBorderStyle = FormBorderStyle.None;
             MainMenuStrip = menuStrip1;
@@ -272,24 +241,20 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmGestionMascota";
             WindowState = FormWindowState.Maximized;
-            tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             toolStripContainer1.ContentPanel.ResumeLayout(false);
             toolStripContainer1.ContentPanel.PerformLayout();
             toolStripContainer1.ResumeLayout(false);
             toolStripContainer1.PerformLayout();
-            tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private TableLayoutPanel tableLayoutPanel1;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem aNIMALESToolStripMenuItem;
         private ToolStripMenuItem aDOPCIÓNToolStripMenuItem;
@@ -303,7 +268,6 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private TableLayoutPanel tableLayoutPanel2;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
     }
