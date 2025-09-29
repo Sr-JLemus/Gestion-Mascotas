@@ -36,6 +36,7 @@
             Column5 = new DataGridViewTextBoxColumn();
             btnAgregarAnimal = new Button();
             btnSalirAnimales = new Button();
+            btnEditarAnimal = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -87,7 +88,7 @@
             // 
             // btnAgregarAnimal
             // 
-            btnAgregarAnimal.Location = new Point(473, 409);
+            btnAgregarAnimal.Location = new Point(345, 409);
             btnAgregarAnimal.Name = "btnAgregarAnimal";
             btnAgregarAnimal.Size = new Size(177, 29);
             btnAgregarAnimal.TabIndex = 1;
@@ -103,12 +104,22 @@
             btnSalirAnimales.Text = "Salir";
             btnSalirAnimales.UseVisualStyleBackColor = true;
             // 
+            // btnEditarAnimal
+            // 
+            btnEditarAnimal.Location = new Point(557, 409);
+            btnEditarAnimal.Name = "btnEditarAnimal";
+            btnEditarAnimal.Size = new Size(94, 29);
+            btnEditarAnimal.TabIndex = 3;
+            btnEditarAnimal.Text = "Editar";
+            btnEditarAnimal.UseVisualStyleBackColor = true;
+            // 
             // frmAnimales
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(106, 153, 78);
             ClientSize = new Size(800, 450);
+            Controls.Add(btnEditarAnimal);
             Controls.Add(btnSalirAnimales);
             Controls.Add(btnAgregarAnimal);
             Controls.Add(dataGridView1);
@@ -128,5 +139,6 @@
         private DataGridViewTextBoxColumn Column5;
         private Button btnAgregarAnimal;
         private Button btnSalirAnimales;
+        private Button btnEditarAnimal;
     }
 }
