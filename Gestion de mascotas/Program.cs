@@ -1,3 +1,5 @@
+using Gestion_de_mascotas.DONATIVOS;
+
 namespace Gestion_de_mascotas
 {
     internal static class Program

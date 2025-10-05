@@ -28,34 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dtvDonaciones = new DataGridView();
+            dgvDonaciones = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
-            Nombre = new DataGridViewTextBoxColumn();
+            Donante = new DataGridViewTextBoxColumn();
             Telefono = new DataGridViewTextBoxColumn();
             Email = new DataGridViewTextBoxColumn();
             Monto = new DataGridViewTextBoxColumn();
             Fecha = new DataGridViewTextBoxColumn();
-            btnAgregar = new Button();
             btnEliminar = new Button();
             btnEditar = new Button();
             btnCancelar = new Button();
             btnBuscar = new Button();
             txtBuscar = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)dtvDonaciones).BeginInit();
+            btnAgregar = new Button();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            panel1 = new Panel();
+            ((System.ComponentModel.ISupportInitialize)dgvDonaciones).BeginInit();
+            tableLayoutPanel1.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // dtvDonaciones
+            // dgvDonaciones
             // 
-            dtvDonaciones.AllowUserToAddRows = false;
-            dtvDonaciones.AllowUserToDeleteRows = false;
-            dtvDonaciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtvDonaciones.Columns.AddRange(new DataGridViewColumn[] { ID, Nombre, Telefono, Email, Monto, Fecha });
-            dtvDonaciones.Location = new Point(12, 12);
-            dtvDonaciones.Name = "dtvDonaciones";
-            dtvDonaciones.ReadOnly = true;
-            dtvDonaciones.RowHeadersWidth = 51;
-            dtvDonaciones.Size = new Size(803, 523);
-            dtvDonaciones.TabIndex = 0;
+            dgvDonaciones.AllowUserToAddRows = false;
+            dgvDonaciones.AllowUserToDeleteRows = false;
+            dgvDonaciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDonaciones.Columns.AddRange(new DataGridViewColumn[] { ID, Donante, Telefono, Email, Monto, Fecha });
+            dgvDonaciones.Dock = DockStyle.Fill;
+            dgvDonaciones.Location = new Point(3, 62);
+            dgvDonaciones.Name = "dgvDonaciones";
+            dgvDonaciones.ReadOnly = true;
+            dgvDonaciones.RowHeadersWidth = 51;
+            dgvDonaciones.Size = new Size(804, 529);
+            dgvDonaciones.TabIndex = 0;
             // 
             // ID
             // 
@@ -66,14 +71,14 @@
             ID.ReadOnly = true;
             ID.Width = 125;
             // 
-            // Nombre
+            // Donante
             // 
-            Nombre.Frozen = true;
-            Nombre.HeaderText = "Nombre";
-            Nombre.MinimumWidth = 6;
-            Nombre.Name = "Nombre";
-            Nombre.ReadOnly = true;
-            Nombre.Width = 125;
+            Donante.Frozen = true;
+            Donante.HeaderText = "Donante";
+            Donante.MinimumWidth = 6;
+            Donante.Name = "Donante";
+            Donante.ReadOnly = true;
+            Donante.Width = 125;
             // 
             // Telefono
             // 
@@ -109,18 +114,9 @@
             Fecha.ReadOnly = true;
             Fecha.Width = 125;
             // 
-            // btnAgregar
-            // 
-            btnAgregar.Location = new Point(31, 570);
-            btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(94, 29);
-            btnAgregar.TabIndex = 1;
-            btnAgregar.Text = "Agregar";
-            btnAgregar.UseVisualStyleBackColor = true;
-            // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(534, 571);
+            btnEliminar.Location = new Point(497, 15);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(94, 29);
             btnEliminar.TabIndex = 2;
@@ -129,7 +125,7 @@
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(131, 570);
+            btnEditar.Location = new Point(103, 13);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(94, 29);
             btnEditar.TabIndex = 3;
@@ -138,7 +134,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(720, 570);
+            btnCancelar.Location = new Point(679, 15);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(94, 29);
             btnCancelar.TabIndex = 4;
@@ -148,7 +144,7 @@
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(231, 570);
+            btnBuscar.Location = new Point(203, 13);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(94, 29);
             btnBuscar.TabIndex = 5;
@@ -157,49 +153,89 @@
             // 
             // txtBuscar
             // 
-            txtBuscar.Location = new Point(340, 572);
+            txtBuscar.Location = new Point(303, 15);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.Size = new Size(188, 27);
             txtBuscar.TabIndex = 6;
+            // 
+            // btnAgregar
+            // 
+            btnAgregar.Location = new Point(3, 13);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(94, 29);
+            btnAgregar.TabIndex = 1;
+            btnAgregar.Text = "Agregar";
+            btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Controls.Add(panel1, 0, 0);
+            tableLayoutPanel1.Controls.Add(dgvDonaciones, 0, 1);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 90F));
+            tableLayoutPanel1.Size = new Size(810, 594);
+            tableLayoutPanel1.TabIndex = 7;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(btnAgregar);
+            panel1.Controls.Add(btnCancelar);
+            panel1.Controls.Add(txtBuscar);
+            panel1.Controls.Add(btnEliminar);
+            panel1.Controls.Add(btnEditar);
+            panel1.Controls.Add(btnBuscar);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(3, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(804, 53);
+            panel1.TabIndex = 1;
             // 
             // frmDonaciones
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(106, 153, 78);
-            ClientSize = new Size(826, 629);
-            Controls.Add(txtBuscar);
-            Controls.Add(btnBuscar);
-            Controls.Add(btnCancelar);
-            Controls.Add(btnEditar);
-            Controls.Add(btnEliminar);
-            Controls.Add(btnAgregar);
-            Controls.Add(dtvDonaciones);
+            ClientSize = new Size(810, 594);
+            Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             MaximizeBox = false;
+            MaximumSize = new Size(832, 645);
             MinimizeBox = false;
+            MinimumSize = new Size(832, 645);
             Name = "frmDonaciones";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Donaciones";
-            ((System.ComponentModel.ISupportInitialize)dtvDonaciones).EndInit();
+            Shown += frmDonaciones_Shown;
+            ((System.ComponentModel.ISupportInitialize)dgvDonaciones).EndInit();
+            tableLayoutPanel1.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dtvDonaciones;
-        private DataGridViewTextBoxColumn ID;
-        private DataGridViewTextBoxColumn Nombre;
-        private DataGridViewTextBoxColumn Telefono;
-        private DataGridViewTextBoxColumn Email;
-        private DataGridViewTextBoxColumn Monto;
-        private DataGridViewTextBoxColumn Fecha;
-        private Button btnAgregar;
+        private DataGridView dgvDonaciones;
         private Button btnEliminar;
         private Button btnEditar;
         private Button btnCancelar;
         private Button btnBuscar;
         private TextBox txtBuscar;
+        private DataGridViewTextBoxColumn ID;
+        private DataGridViewTextBoxColumn Donante;
+        private DataGridViewTextBoxColumn Telefono;
+        private DataGridViewTextBoxColumn Email;
+        private DataGridViewTextBoxColumn Monto;
+        private DataGridViewTextBoxColumn Fecha;
+        private Button btnAgregar;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Panel panel1;
     }
 }
