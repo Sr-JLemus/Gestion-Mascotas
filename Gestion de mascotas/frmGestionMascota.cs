@@ -21,5 +21,13 @@ namespace Gestion_de_mascotas
         {
             this.Close();
         }
+
+        private void dONATIVOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //abrir formulario donaciones
+            frmDonaciones frmDonaciones = new frmDonaciones();
+            frmDonaciones.ShowDialog();
+            frmDonaciones.Dispose();
+        }
     }
 }

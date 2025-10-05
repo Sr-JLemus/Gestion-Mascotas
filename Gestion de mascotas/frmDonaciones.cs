@@ -16,5 +16,10 @@ namespace Gestion_de_mascotas
         {
             InitializeComponent();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

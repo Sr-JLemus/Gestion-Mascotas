@@ -136,6 +136,7 @@
             dONATIVOSToolStripMenuItem.Name = "dONATIVOSToolStripMenuItem";
             dONATIVOSToolStripMenuItem.Size = new Size(201, 200);
             dONATIVOSToolStripMenuItem.Text = "DONATIVOS";
+            dONATIVOSToolStripMenuItem.Click += dONATIVOSToolStripMenuItem_Click;
             // 
             // eVENTOSToolStripMenuItem
             // 
@@ -161,7 +162,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Bodoni MT", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(237, 237, 237);
-            label1.Location = new Point(588, 483);
+            label1.Location = new Point(521, 483);
             label1.Name = "label1";
             label1.Size = new Size(156, 34);
             label1.TabIndex = 3;
@@ -172,7 +173,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Bodoni MT", 16.2F, FontStyle.Bold);
             label2.ForeColor = Color.FromArgb(237, 237, 237);
-            label2.Location = new Point(1386, 483);
+            label2.Location = new Point(1372, 483);
             label2.Name = "label2";
             label2.Size = new Size(184, 34);
             label2.TabIndex = 4;
@@ -183,7 +184,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Bodoni MT", 16.2F, FontStyle.Bold);
             label3.ForeColor = Color.FromArgb(237, 237, 237);
-            label3.Location = new Point(588, 990);
+            label3.Location = new Point(521, 990);
             label3.Name = "label3";
             label3.Size = new Size(169, 34);
             label3.TabIndex = 5;
@@ -194,7 +195,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Bodoni MT", 16.2F, FontStyle.Bold);
             label4.ForeColor = Color.FromArgb(237, 237, 237);
-            label4.Location = new Point(1386, 990);
+            label4.Location = new Point(1420, 990);
             label4.Name = "label4";
             label4.Size = new Size(136, 34);
             label4.TabIndex = 6;
@@ -203,7 +204,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.cuidado_de_mascotas;
-            pictureBox2.Location = new Point(1197, 35);
+            pictureBox2.Location = new Point(1261, 35);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(647, 445);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -233,7 +234,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(1197, 542);
+            pictureBox4.Location = new Point(1261, 542);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(647, 445);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
