@@ -16,5 +16,27 @@ namespace Gestion_de_mascotas
         {
             InitializeComponent();
         }
+
+        private void btnAgregarAnimal_Click(object sender, EventArgs e)
+        {
+            frmAgregarAnimal frm = new frmAgregarAnimal();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.Rows.Add(
+                    frm.Nombre,
+                    frm.Edad,
+                    frm.Sexo,
+                    frm.Especie,
+                    frm.Estado
+                );
+            }
+        }
+
+        
+
+        private void btnSalirAnimales_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

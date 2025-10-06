@@ -120,6 +120,7 @@
             aNIMALESToolStripMenuItem.Name = "aNIMALESToolStripMenuItem";
             aNIMALESToolStripMenuItem.Size = new Size(201, 200);
             aNIMALESToolStripMenuItem.Text = "ANIMALES";
+            aNIMALESToolStripMenuItem.Click += aNIMALESToolStripMenuItem_Click;
             // 
             // aDOPCIÓNToolStripMenuItem
             // 

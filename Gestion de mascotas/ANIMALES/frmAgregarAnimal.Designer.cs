@@ -39,7 +39,10 @@
             mtxEdadAnimal = new MaskedTextBox();
             rdbHembra = new RadioButton();
             rdbMacho = new RadioButton();
-            chkEstado = new CheckBox();
+            btnAgregarA = new Button();
+            btnCancelarAnimal = new Button();
+            rdbAdoptado = new RadioButton();
+            rdbLibre = new RadioButton();
             SuspendLayout();
             // 
             // lblAnimal
@@ -155,22 +158,57 @@
             rdbMacho.Text = "Macho";
             rdbMacho.UseVisualStyleBackColor = true;
             // 
-            // chkEstado
+            // btnAgregarA
             // 
-            chkEstado.AutoSize = true;
-            chkEstado.Location = new Point(121, 401);
-            chkEstado.Name = "chkEstado";
-            chkEstado.Size = new Size(99, 24);
-            chkEstado.TabIndex = 11;
-            chkEstado.Text = "Adoptado";
-            chkEstado.UseVisualStyleBackColor = true;
+            btnAgregarA.Location = new Point(423, 417);
+            btnAgregarA.Name = "btnAgregarA";
+            btnAgregarA.Size = new Size(94, 29);
+            btnAgregarA.TabIndex = 12;
+            btnAgregarA.Text = "Aceptar";
+            btnAgregarA.UseVisualStyleBackColor = true;
+            btnAgregarA.Click += btnAgregarA_Click;
+            // 
+            // btnCancelarAnimal
+            // 
+            btnCancelarAnimal.Location = new Point(542, 417);
+            btnCancelarAnimal.Name = "btnCancelarAnimal";
+            btnCancelarAnimal.Size = new Size(94, 29);
+            btnCancelarAnimal.TabIndex = 13;
+            btnCancelarAnimal.Text = "Cancelar";
+            btnCancelarAnimal.UseVisualStyleBackColor = true;
+            btnCancelarAnimal.Click += btnCancelarAnimal_Click;
+            // 
+            // rdbAdoptado
+            // 
+            rdbAdoptado.AutoSize = true;
+            rdbAdoptado.Location = new Point(131, 391);
+            rdbAdoptado.Name = "rdbAdoptado";
+            rdbAdoptado.Size = new Size(98, 24);
+            rdbAdoptado.TabIndex = 14;
+            rdbAdoptado.TabStop = true;
+            rdbAdoptado.Text = "Adoptado";
+            rdbAdoptado.UseVisualStyleBackColor = true;
+            // 
+            // rdbLibre
+            // 
+            rdbLibre.AutoSize = true;
+            rdbLibre.Location = new Point(278, 388);
+            rdbLibre.Name = "rdbLibre";
+            rdbLibre.Size = new Size(63, 24);
+            rdbLibre.TabIndex = 15;
+            rdbLibre.TabStop = true;
+            rdbLibre.Text = "Libre";
+            rdbLibre.UseVisualStyleBackColor = true;
             // 
             // frmAgregarAnimal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(659, 469);
-            Controls.Add(chkEstado);
+            Controls.Add(rdbLibre);
+            Controls.Add(rdbAdoptado);
+            Controls.Add(btnCancelarAnimal);
+            Controls.Add(btnAgregarA);
             Controls.Add(rdbMacho);
             Controls.Add(rdbHembra);
             Controls.Add(mtxEdadAnimal);
@@ -183,7 +221,7 @@
             Controls.Add(label2);
             Controls.Add(lblAnimal);
             Name = "frmAgregarAnimal";
-            Text = "frmAgregarAnimal";
+            Text = "Agregar Animal";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -201,6 +239,9 @@
         private MaskedTextBox mtxEdadAnimal;
         private RadioButton rdbHembra;
         private RadioButton rdbMacho;
-        private CheckBox chkEstado;
+        private Button btnAgregarA;
+        private Button btnCancelarAnimal;
+        private RadioButton rdbAdoptado;
+        private RadioButton rdbLibre;
     }
 }

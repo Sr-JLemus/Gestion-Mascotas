@@ -29,5 +29,12 @@ namespace Gestion_de_mascotas
             frmDonaciones.ShowDialog();
             frmDonaciones.Dispose();
         }
+
+        private void aNIMALESToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAnimales frmAnimales = new frmAnimales(); 
+            frmAnimales.ShowDialog();
+            frmAnimales.Dispose();
+        }
     }
 }
