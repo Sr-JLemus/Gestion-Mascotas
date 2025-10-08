@@ -81,12 +81,12 @@ namespace Gestion_de_mascotas
                 frmAgregarAnimal frm = new frmAgregarAnimal();
 
                 
-                frm.Nombre = fila.Cells[0].Value.ToString();
-                frm.Edad = Convert.ToInt32(fila.Cells[1].Value);
-                frm.Sexo = fila.Cells[2].Value.ToString();
-                frm.Especie = fila.Cells[3].Value.ToString();
-                frm.Estado = fila.Cells[4].Value.ToString();
-                frm.ID = fila.Cells[5].Value.ToString();
+                frm.Nombre = fila.Cells[1].Value.ToString();
+                frm.Edad = Convert.ToInt32(fila.Cells[3].Value);
+                frm.Sexo = fila.Cells[4].Value.ToString();
+                frm.Especie = fila.Cells[2].Value.ToString();
+                frm.Estado = fila.Cells[5].Value.ToString();
+                frm.ID = fila.Cells[6].Value.ToString();
 
                 
                 if (frm.ShowDialog() == DialogResult.OK)
