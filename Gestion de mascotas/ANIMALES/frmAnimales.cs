@@ -12,7 +12,8 @@ namespace Gestion_de_mascotas
 {
     public partial class frmAnimales : Form
     {
-        int contadorID = 1;
+       
+
         public frmAnimales()
         {
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace Gestion_de_mascotas
         {
             frmAgregarAnimal frm = new frmAgregarAnimal();
 
-            frm.ID = "A" + contadorID.ToString("D3");
+            
 
             if (frm.ShowDialog() == DialogResult.OK)
             {
@@ -35,7 +36,7 @@ namespace Gestion_de_mascotas
                    frm.Estado
                );
 
-                contadorID++; 
+               
 
 
                 if (frm.ShowDialog() == DialogResult.OK)

@@ -11,8 +11,10 @@ using System.Windows.Forms;
 namespace Gestion_de_mascotas
 {
     public partial class frmAgregarAnimal : Form
+
     {
-        int contadorID = 1;
+
+        public string ID { get => txtIDAnimal.Text; set => txtIDAnimal.Text = value; }
         public string Nombre { get => txtNombreAnimal.Text; set => txtNombreAnimal.Text = value; }
         public string Especie { get => cmbEspecie.Text; set => cmbEspecie.Text = value; }
         public int Edad
@@ -50,7 +52,8 @@ namespace Gestion_de_mascotas
             }
         }
 
-        public string ID { get => lblAnimal.Text; set => lblAnimal.Text = value; }
+
+
 
 
         public frmAgregarAnimal() => InitializeComponent();
@@ -106,12 +109,6 @@ namespace Gestion_de_mascotas
 
             e.Handled = true;
         }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
 
 

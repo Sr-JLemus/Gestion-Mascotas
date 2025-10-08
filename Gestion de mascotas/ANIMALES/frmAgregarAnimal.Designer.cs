@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            lblAnimal = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -46,19 +45,9 @@
             chkAdoptado = new CheckBox();
             chkLibre = new CheckBox();
             label1 = new Label();
+            txtIDAnimal = new TextBox();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
-            // 
-            // lblAnimal
-            // 
-            lblAnimal.AutoSize = true;
-            lblAnimal.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
-            lblAnimal.ForeColor = Color.Black;
-            lblAnimal.Location = new Point(162, 58);
-            lblAnimal.Name = "lblAnimal";
-            lblAnimal.Size = new Size(102, 25);
-            lblAnimal.TabIndex = 0;
-            lblAnimal.Text = "Animal N.";
             // 
             // label2
             // 
@@ -92,7 +81,7 @@
             label4.Size = new Size(130, 25);
             label4.TabIndex = 3;
             label4.Text = "Edad (meses)";
-            label4.Click += label4_Click;
+//            label4.Click += label4_Click;
             // 
             // label5
             // 
@@ -230,12 +219,20 @@
             label1.TabIndex = 16;
             label1.Text = "ANIMAL N.";
             // 
+            // txtIDAnimal
+            // 
+            txtIDAnimal.Location = new Point(171, 59);
+            txtIDAnimal.Name = "txtIDAnimal";
+            txtIDAnimal.Size = new Size(125, 27);
+            txtIDAnimal.TabIndex = 17;
+            // 
             // frmAgregarAnimal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(106, 153, 78);
             ClientSize = new Size(649, 452);
+            Controls.Add(txtIDAnimal);
             Controls.Add(label1);
             Controls.Add(chkLibre);
             Controls.Add(chkAdoptado);
@@ -251,7 +248,6 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(lblAnimal);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             MaximizeBox = false;
             MaximumSize = new Size(671, 503);
@@ -267,8 +263,6 @@
         }
 
         #endregion
-
-        private Label lblAnimal;
         private Label label2;
         private Label label3;
         private Label label4;
@@ -285,5 +279,6 @@
         private CheckBox chkLibre;
         private CheckBox chkAdoptado;
         private Label label1;
+        private TextBox txtIDAnimal;
     }
 }
