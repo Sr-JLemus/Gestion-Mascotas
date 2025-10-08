@@ -12,6 +12,7 @@ namespace Gestion_de_mascotas
 {
     public partial class frmAgregarAnimal : Form
     {
+        int contadorID = 1;
         public string Nombre { get => txtNombreAnimal.Text; set => txtNombreAnimal.Text = value; }
         public string Especie { get => cmbEspecie.Text; set => cmbEspecie.Text = value; }
         public int Edad
@@ -39,15 +40,19 @@ namespace Gestion_de_mascotas
         }
         public string Estado
         {
-            get => rdbLibre.Checked ? "Libre" : "Adoptado";
+            get => chkLibre.Checked ? "Libre" : "Adoptado";
             set
             {
                 if (value == "Libre")
-                    rdbLibre.Checked = true;
+                    chkLibre.Checked = true;
                 else if (value == "Adoptado")
-                    rdbAdoptado.Checked = true;
+                    chkAdoptado.Checked = true;
             }
         }
+
+        public string ID { get => lblAnimal.Text; set => lblAnimal.Text = value; }
+
+
         public frmAgregarAnimal() => InitializeComponent();
 
         private void btnAgregarA_Click(object sender, EventArgs e) => this.DialogResult = DialogResult.OK;
@@ -65,8 +70,10 @@ namespace Gestion_de_mascotas
             mtxEdadAnimal.TextChanged += ValidarFormulario;
             rdbHembra.CheckedChanged += ValidarFormulario;
             rdbMacho.CheckedChanged += ValidarFormulario;
-            rdbLibre.CheckedChanged += ValidarFormulario;
-            rdbAdoptado.CheckedChanged += ValidarFormulario;
+            chkAdoptado.CheckedChanged += ValidarFormulario;
+            chkLibre.CheckedChanged += ValidarFormulario;
+
+
         }
 
         private void ValidarFormulario(object? sender, EventArgs e)
@@ -75,12 +82,12 @@ namespace Gestion_de_mascotas
             bool especieOk = !string.IsNullOrWhiteSpace(cmbEspecie.Text);
             bool edadOk = mtxEdadAnimal.MaskFull && int.TryParse(mtxEdadAnimal.Text, out int edad) && edad >= 0;
             bool sexoOk = rdbHembra.Checked || rdbMacho.Checked;
-            bool estadoOk = rdbLibre.Checked || rdbAdoptado.Checked;
+            bool estadoOk = chkLibre.Checked || chkAdoptado.Checked;
             errorProvider1.SetError(txtNombreAnimal, nombreOk ? "" : "El nombre es obligatorio.");
             errorProvider1.SetError(cmbEspecie, especieOk ? "" : "La especie es obligatoria.");
             errorProvider1.SetError(mtxEdadAnimal, edadOk ? "" : "La edad no es válida.");
             errorProvider1.SetError(rdbHembra, sexoOk ? "" : "El sexo es obligatorio.");
-            errorProvider1.SetError(rdbLibre, estadoOk ? "" : "El estado es obligatorio.");
+            errorProvider1.SetError(chkLibre, estadoOk ? "" : "El estado es obligatorio.");
             btnAceptar.Enabled = nombreOk && especieOk && edadOk && sexoOk && estadoOk;
         }
 
@@ -99,5 +106,16 @@ namespace Gestion_de_mascotas
 
             e.Handled = true;
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
     }
 }
+

@@ -42,9 +42,10 @@
             rdbMacho = new RadioButton();
             btnAceptar = new Button();
             btnCancelarAnimal = new Button();
-            rdbAdoptado = new RadioButton();
-            rdbLibre = new RadioButton();
             errorProvider1 = new ErrorProvider(components);
+            chkAdoptado = new CheckBox();
+            chkLibre = new CheckBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
@@ -52,10 +53,10 @@
             // 
             lblAnimal.AutoSize = true;
             lblAnimal.Font = new Font("Sitka Banner", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblAnimal.ForeColor = Color.FromArgb(106, 153, 78);
-            lblAnimal.Location = new Point(27, 28);
+            lblAnimal.ForeColor = Color.Black;
+            lblAnimal.Location = new Point(162, 58);
             lblAnimal.Name = "lblAnimal";
-            lblAnimal.Size = new Size(96, 32);
+            lblAnimal.Size = new Size(119, 39);
             lblAnimal.TabIndex = 0;
             lblAnimal.Text = "Animal N.";
             // 
@@ -64,9 +65,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Sitka Banner", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(106, 153, 78);
-            label2.Location = new Point(21, 86);
+            label2.Location = new Point(24, 115);
             label2.Name = "label2";
-            label2.Size = new Size(72, 28);
+            label2.Size = new Size(86, 33);
             label2.TabIndex = 1;
             label2.Text = "Nombre";
             // 
@@ -75,9 +76,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Sitka Banner", 13.7999992F);
             label3.ForeColor = Color.FromArgb(106, 153, 78);
-            label3.Location = new Point(21, 139);
+            label3.Location = new Point(24, 185);
             label3.Name = "label3";
-            label3.Size = new Size(66, 28);
+            label3.Size = new Size(78, 33);
             label3.TabIndex = 2;
             label3.Text = "Especie";
             // 
@@ -86,20 +87,21 @@
             label4.AutoSize = true;
             label4.Font = new Font("Sitka Banner", 13.7999992F);
             label4.ForeColor = Color.FromArgb(106, 153, 78);
-            label4.Location = new Point(21, 188);
+            label4.Location = new Point(24, 251);
             label4.Name = "label4";
-            label4.Size = new Size(48, 28);
+            label4.Size = new Size(132, 33);
             label4.TabIndex = 3;
-            label4.Text = "Edad";
+            label4.Text = "Edad (meses)";
+            label4.Click += label4_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Sitka Banner", 13.7999992F);
             label5.ForeColor = Color.FromArgb(106, 153, 78);
-            label5.Location = new Point(21, 240);
+            label5.Location = new Point(24, 320);
             label5.Name = "label5";
-            label5.Size = new Size(46, 28);
+            label5.Size = new Size(56, 33);
             label5.TabIndex = 4;
             label5.Text = "Sexo";
             // 
@@ -108,18 +110,17 @@
             label6.AutoSize = true;
             label6.Font = new Font("Sitka Banner", 13.7999992F);
             label6.ForeColor = Color.FromArgb(106, 153, 78);
-            label6.Location = new Point(21, 294);
+            label6.Location = new Point(24, 392);
             label6.Name = "label6";
-            label6.Size = new Size(61, 28);
+            label6.Size = new Size(74, 33);
             label6.TabIndex = 5;
             label6.Text = "Estado";
             // 
             // txtNombreAnimal
             // 
-            txtNombreAnimal.Location = new Point(106, 84);
-            txtNombreAnimal.Margin = new Padding(3, 2, 3, 2);
+            txtNombreAnimal.Location = new Point(121, 112);
             txtNombreAnimal.Name = "txtNombreAnimal";
-            txtNombreAnimal.Size = new Size(260, 23);
+            txtNombreAnimal.Size = new Size(297, 27);
             txtNombreAnimal.TabIndex = 6;
             txtNombreAnimal.KeyPress += txtNombreAnimal_KeyPress;
             // 
@@ -128,19 +129,17 @@
             cmbEspecie.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbEspecie.FormattingEnabled = true;
             cmbEspecie.Items.AddRange(new object[] { "Mamifero", "Ave", "Reptil", "Pez" });
-            cmbEspecie.Location = new Point(106, 134);
-            cmbEspecie.Margin = new Padding(3, 2, 3, 2);
+            cmbEspecie.Location = new Point(121, 179);
             cmbEspecie.Name = "cmbEspecie";
-            cmbEspecie.Size = new Size(260, 23);
+            cmbEspecie.Size = new Size(297, 28);
             cmbEspecie.TabIndex = 7;
             // 
             // mtxEdadAnimal
             // 
-            mtxEdadAnimal.Location = new Point(106, 183);
-            mtxEdadAnimal.Margin = new Padding(3, 2, 3, 2);
+            mtxEdadAnimal.Location = new Point(162, 257);
             mtxEdadAnimal.Mask = "00";
             mtxEdadAnimal.Name = "mtxEdadAnimal";
-            mtxEdadAnimal.Size = new Size(110, 23);
+            mtxEdadAnimal.Size = new Size(125, 27);
             mtxEdadAnimal.TabIndex = 8;
             mtxEdadAnimal.ValidatingType = typeof(int);
             mtxEdadAnimal.MaskInputRejected += mtxEdadAnimal_MaskInputRejected;
@@ -148,10 +147,9 @@
             // rdbHembra
             // 
             rdbHembra.AutoSize = true;
-            rdbHembra.Location = new Point(106, 238);
-            rdbHembra.Margin = new Padding(3, 2, 3, 2);
+            rdbHembra.Location = new Point(121, 317);
             rdbHembra.Name = "rdbHembra";
-            rdbHembra.Size = new Size(68, 19);
+            rdbHembra.Size = new Size(84, 24);
             rdbHembra.TabIndex = 9;
             rdbHembra.TabStop = true;
             rdbHembra.Text = "Hembra";
@@ -160,10 +158,9 @@
             // rdbMacho
             // 
             rdbMacho.AutoSize = true;
-            rdbMacho.Location = new Point(212, 237);
-            rdbMacho.Margin = new Padding(3, 2, 3, 2);
+            rdbMacho.Location = new Point(242, 316);
             rdbMacho.Name = "rdbMacho";
-            rdbMacho.Size = new Size(62, 19);
+            rdbMacho.Size = new Size(75, 24);
             rdbMacho.TabIndex = 10;
             rdbMacho.TabStop = true;
             rdbMacho.Text = "Macho";
@@ -171,10 +168,9 @@
             // 
             // btnAceptar
             // 
-            btnAceptar.Location = new Point(370, 313);
-            btnAceptar.Margin = new Padding(3, 2, 3, 2);
+            btnAceptar.Location = new Point(423, 417);
             btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(82, 22);
+            btnAceptar.Size = new Size(94, 29);
             btnAceptar.TabIndex = 12;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = true;
@@ -182,50 +178,58 @@
             // 
             // btnCancelarAnimal
             // 
-            btnCancelarAnimal.Location = new Point(474, 313);
-            btnCancelarAnimal.Margin = new Padding(3, 2, 3, 2);
+            btnCancelarAnimal.Location = new Point(542, 417);
             btnCancelarAnimal.Name = "btnCancelarAnimal";
-            btnCancelarAnimal.Size = new Size(82, 22);
+            btnCancelarAnimal.Size = new Size(94, 29);
             btnCancelarAnimal.TabIndex = 13;
             btnCancelarAnimal.Text = "Cancelar";
             btnCancelarAnimal.UseVisualStyleBackColor = true;
             btnCancelarAnimal.Click += btnCancelarAnimal_Click;
             // 
-            // rdbAdoptado
-            // 
-            rdbAdoptado.AutoSize = true;
-            rdbAdoptado.Location = new Point(115, 293);
-            rdbAdoptado.Margin = new Padding(3, 2, 3, 2);
-            rdbAdoptado.Name = "rdbAdoptado";
-            rdbAdoptado.Size = new Size(78, 19);
-            rdbAdoptado.TabIndex = 14;
-            rdbAdoptado.TabStop = true;
-            rdbAdoptado.Text = "Adoptado";
-            rdbAdoptado.UseVisualStyleBackColor = true;
-            // 
-            // rdbLibre
-            // 
-            rdbLibre.AutoSize = true;
-            rdbLibre.Location = new Point(243, 291);
-            rdbLibre.Margin = new Padding(3, 2, 3, 2);
-            rdbLibre.Name = "rdbLibre";
-            rdbLibre.Size = new Size(51, 19);
-            rdbLibre.TabIndex = 15;
-            rdbLibre.TabStop = true;
-            rdbLibre.Text = "Libre";
-            rdbLibre.UseVisualStyleBackColor = true;
-            // 
             // errorProvider1
             // 
+            errorProvider1.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             errorProvider1.ContainerControl = this;
+            // 
+            // chkAdoptado
+            // 
+            chkAdoptado.AutoSize = true;
+            chkAdoptado.Location = new Point(121, 401);
+            chkAdoptado.Name = "chkAdoptado";
+            chkAdoptado.Size = new Size(99, 24);
+            chkAdoptado.TabIndex = 14;
+            chkAdoptado.Text = "Adoptado";
+            chkAdoptado.UseVisualStyleBackColor = true;
+            // 
+            // chkLibre
+            // 
+            chkLibre.AutoSize = true;
+            chkLibre.Location = new Point(263, 401);
+            chkLibre.Name = "chkLibre";
+            chkLibre.Size = new Size(64, 24);
+            chkLibre.TabIndex = 15;
+            chkLibre.Text = "Libre";
+            chkLibre.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Sitka Banner", 16.1999989F);
+            label1.ForeColor = Color.FromArgb(106, 153, 78);
+            label1.Location = new Point(30, 58);
+            label1.Name = "label1";
+            label1.Size = new Size(132, 39);
+            label1.TabIndex = 16;
+            label1.Text = "ANIMAL N.";
             // 
             // frmAgregarAnimal
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(574, 351);
-            Controls.Add(rdbLibre);
-            Controls.Add(rdbAdoptado);
+            ClientSize = new Size(649, 452);
+            Controls.Add(label1);
+            Controls.Add(chkLibre);
+            Controls.Add(chkAdoptado);
             Controls.Add(btnCancelarAnimal);
             Controls.Add(btnAceptar);
             Controls.Add(rdbMacho);
@@ -240,11 +244,10 @@
             Controls.Add(label2);
             Controls.Add(lblAnimal);
             FormBorderStyle = FormBorderStyle.Fixed3D;
-            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
-            MaximumSize = new Size(590, 390);
+            MaximumSize = new Size(671, 503);
             MinimizeBox = false;
-            MinimumSize = new Size(590, 390);
+            MinimumSize = new Size(671, 503);
             Name = "frmAgregarAnimal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Agregar Animal";
@@ -269,8 +272,9 @@
         private RadioButton rdbMacho;
         private Button btnAceptar;
         private Button btnCancelarAnimal;
-        private RadioButton rdbAdoptado;
-        private RadioButton rdbLibre;
         private ErrorProvider errorProvider1;
+        private CheckBox chkLibre;
+        private CheckBox chkAdoptado;
+        private Label label1;
     }
 }
