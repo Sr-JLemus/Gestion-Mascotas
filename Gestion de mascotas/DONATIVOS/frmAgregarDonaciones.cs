@@ -36,7 +36,7 @@ namespace Gestion_de_mascotas.DONATIVOS
         {
             btnAceptar.Enabled = false;
 
-            txtDonante.Focus();
+            txtID.Focus();
             txtDonante.TextChanged += ValidarFormulario;
             txtEmail.TextChanged += ValidarFormulario;
             txtMonto.TextChanged += ValidarFormulario;

@@ -13,6 +13,7 @@ namespace Gestion_de_mascotas
 {
     public partial class frmDonaciones : Form
     {
+        private const DataGridViewAutoSizeColumnsMode fill = DataGridViewAutoSizeColumnsMode.Fill;
         private RepositorioDonaciones repo;
         public frmDonaciones()
         {
@@ -25,7 +26,12 @@ namespace Gestion_de_mascotas
             dgvDonaciones.MultiSelect = false;
             dgvDonaciones.RowHeadersWidth = 50;
             dgvDonaciones.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvDonaciones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            foreach (DataGridViewColumn col in dgvDonaciones.Columns)
+            {
+                col.Frozen = false;
+            }
+            dgvDonaciones.AutoSizeColumnsMode = fill;
         }
 
         private void frmDonaciones_Shown(object sender, EventArgs e)
@@ -59,6 +65,27 @@ namespace Gestion_de_mascotas
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            //El boton editar va a crear un clon de la donacion seleccionada y abrira el formulario para editar esa donacion
+            if (dgvDonaciones.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Seleccione una donación para editar.", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            var donacionSeleccionada = (Donaciones)dgvDonaciones.SelectedRows[0].DataBoundItem;
+            var donacionClon = new Donaciones(donacionSeleccionada.ID, donacionSeleccionada.Donante, donacionSeleccionada.Telefono, donacionSeleccionada.Email, donacionSeleccionada.Monto, donacionSeleccionada.Fecha);
+            using var frm = new frmAgregarDonaciones(repo);
+            frm.Donaciones = donacionClon;
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                int selectedIndex = dgvDonaciones.SelectedRows[0].Index;
+                repo.Modificar(selectedIndex, frm.Donaciones);
+                ActualizarDataGrid(selectedIndex);
+                MessageBox.Show("Donación modificada exitosamente.", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

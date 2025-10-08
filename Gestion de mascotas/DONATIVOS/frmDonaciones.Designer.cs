@@ -55,11 +55,12 @@
             dgvDonaciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvDonaciones.Columns.AddRange(new DataGridViewColumn[] { ID, Donante, Telefono, Email, Monto, Fecha });
             dgvDonaciones.Dock = DockStyle.Fill;
-            dgvDonaciones.Location = new Point(3, 62);
+            dgvDonaciones.Location = new Point(3, 47);
+            dgvDonaciones.Margin = new Padding(3, 2, 3, 2);
             dgvDonaciones.Name = "dgvDonaciones";
             dgvDonaciones.ReadOnly = true;
             dgvDonaciones.RowHeadersWidth = 51;
-            dgvDonaciones.Size = new Size(804, 529);
+            dgvDonaciones.Size = new Size(704, 403);
             dgvDonaciones.TabIndex = 0;
             // 
             // ID
@@ -116,27 +117,31 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(497, 15);
+            btnEliminar.Location = new Point(435, 11);
+            btnEliminar.Margin = new Padding(3, 2, 3, 2);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(94, 29);
+            btnEliminar.Size = new Size(82, 22);
             btnEliminar.TabIndex = 2;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(103, 13);
+            btnEditar.Location = new Point(90, 10);
+            btnEditar.Margin = new Padding(3, 2, 3, 2);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(94, 29);
+            btnEditar.Size = new Size(82, 22);
             btnEditar.TabIndex = 3;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(679, 15);
+            btnCancelar.Location = new Point(594, 11);
+            btnCancelar.Margin = new Padding(3, 2, 3, 2);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(94, 29);
+            btnCancelar.Size = new Size(82, 22);
             btnCancelar.TabIndex = 4;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
@@ -144,25 +149,28 @@
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(203, 13);
+            btnBuscar.Location = new Point(178, 10);
+            btnBuscar.Margin = new Padding(3, 2, 3, 2);
             btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(94, 29);
+            btnBuscar.Size = new Size(82, 22);
             btnBuscar.TabIndex = 5;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
             // 
             // txtBuscar
             // 
-            txtBuscar.Location = new Point(303, 15);
+            txtBuscar.Location = new Point(265, 11);
+            txtBuscar.Margin = new Padding(3, 2, 3, 2);
             txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(188, 27);
+            txtBuscar.Size = new Size(165, 23);
             txtBuscar.TabIndex = 6;
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(3, 13);
+            btnAgregar.Location = new Point(3, 10);
+            btnAgregar.Margin = new Padding(3, 2, 3, 2);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(94, 29);
+            btnAgregar.Size = new Size(82, 22);
             btnAgregar.TabIndex = 1;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
@@ -176,11 +184,12 @@
             tableLayoutPanel1.Controls.Add(dgvDonaciones, 0, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 90F));
-            tableLayoutPanel1.Size = new Size(810, 594);
+            tableLayoutPanel1.Size = new Size(710, 452);
             tableLayoutPanel1.TabIndex = 7;
             // 
             // panel1
@@ -192,23 +201,25 @@
             panel1.Controls.Add(btnEditar);
             panel1.Controls.Add(btnBuscar);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(3, 3);
+            panel1.Location = new Point(3, 2);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(804, 53);
+            panel1.Size = new Size(704, 41);
             panel1.TabIndex = 1;
             // 
             // frmDonaciones
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(106, 153, 78);
-            ClientSize = new Size(810, 594);
+            ClientSize = new Size(710, 452);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.Fixed3D;
+            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
-            MaximumSize = new Size(832, 645);
+            MaximumSize = new Size(730, 495);
             MinimizeBox = false;
-            MinimumSize = new Size(832, 645);
+            MinimumSize = new Size(730, 495);
             Name = "frmDonaciones";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Donaciones";

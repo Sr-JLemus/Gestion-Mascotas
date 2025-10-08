@@ -93,7 +93,8 @@
             // ContentPanel
             // 
             ContentPanel.AutoScroll = true;
-            ContentPanel.Size = new Size(1920, 1080);
+            ContentPanel.Margin = new Padding(3, 2, 3, 2);
+            ContentPanel.Size = new Size(1680, 810);
             // 
             // menuStrip1
             // 
@@ -104,7 +105,8 @@
             menuStrip1.LayoutStyle = ToolStripLayoutStyle.VerticalStackWithOverflow;
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(207, 1080);
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(206, 810);
             menuStrip1.Stretch = false;
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
@@ -162,9 +164,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Bodoni MT", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(237, 237, 237);
-            label1.Location = new Point(521, 483);
+            label1.Location = new Point(456, 362);
             label1.Name = "label1";
-            label1.Size = new Size(156, 34);
+            label1.Size = new Size(120, 26);
             label1.TabIndex = 3;
             label1.Text = "ANIMALES";
             // 
@@ -173,9 +175,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Bodoni MT", 16.2F, FontStyle.Bold);
             label2.ForeColor = Color.FromArgb(237, 237, 237);
-            label2.Location = new Point(1372, 483);
+            label2.Location = new Point(1200, 362);
             label2.Name = "label2";
-            label2.Size = new Size(184, 34);
+            label2.Size = new Size(142, 26);
             label2.TabIndex = 4;
             label2.Text = "ADOPCIONES";
             // 
@@ -184,9 +186,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Bodoni MT", 16.2F, FontStyle.Bold);
             label3.ForeColor = Color.FromArgb(237, 237, 237);
-            label3.Location = new Point(521, 990);
+            label3.Location = new Point(456, 742);
             label3.Name = "label3";
-            label3.Size = new Size(169, 34);
+            label3.Size = new Size(130, 26);
             label3.TabIndex = 5;
             label3.Text = "DONATIVOS";
             // 
@@ -195,18 +197,19 @@
             label4.AutoSize = true;
             label4.Font = new Font("Bodoni MT", 16.2F, FontStyle.Bold);
             label4.ForeColor = Color.FromArgb(237, 237, 237);
-            label4.Location = new Point(1420, 990);
+            label4.Location = new Point(1242, 742);
             label4.Name = "label4";
-            label4.Size = new Size(136, 34);
+            label4.Size = new Size(106, 26);
             label4.TabIndex = 6;
             label4.Text = "EVENTOS";
             // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.cuidado_de_mascotas;
-            pictureBox2.Location = new Point(1261, 35);
+            pictureBox2.Location = new Point(1103, 26);
+            pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(647, 445);
+            pictureBox2.Size = new Size(566, 334);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
@@ -214,9 +217,10 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(372, 542);
+            pictureBox3.Location = new Point(326, 406);
+            pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(647, 445);
+            pictureBox3.Size = new Size(566, 334);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 0;
             pictureBox3.TabStop = false;
@@ -224,9 +228,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(372, 35);
+            pictureBox1.Location = new Point(326, 26);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(647, 445);
+            pictureBox1.Size = new Size(566, 334);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -234,9 +239,10 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(1261, 542);
+            pictureBox4.Location = new Point(1103, 406);
+            pictureBox4.Margin = new Padding(3, 2, 3, 2);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(647, 445);
+            pictureBox4.Size = new Size(566, 334);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 1;
             pictureBox4.TabStop = false;
@@ -257,27 +263,26 @@
             toolStripContainer1.ContentPanel.Controls.Add(label2);
             toolStripContainer1.ContentPanel.Controls.Add(label1);
             toolStripContainer1.ContentPanel.Controls.Add(menuStrip1);
-            toolStripContainer1.ContentPanel.Size = new Size(1920, 1080);
+            toolStripContainer1.ContentPanel.Margin = new Padding(3, 2, 3, 2);
+            toolStripContainer1.ContentPanel.Size = new Size(1680, 810);
             toolStripContainer1.Dock = DockStyle.Fill;
             toolStripContainer1.LeftToolStripPanelVisible = false;
             toolStripContainer1.Location = new Point(0, 0);
+            toolStripContainer1.Margin = new Padding(3, 2, 3, 2);
             toolStripContainer1.Name = "toolStripContainer1";
             toolStripContainer1.RightToolStripPanelVisible = false;
-            toolStripContainer1.Size = new Size(1920, 1080);
+            toolStripContainer1.Size = new Size(1680, 810);
             toolStripContainer1.TabIndex = 2;
             toolStripContainer1.Text = "toolStripContainer1";
             toolStripContainer1.TopToolStripPanelVisible = false;
             // 
             // frmGestionMascota
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Inherit;
             BackColor = Color.FromArgb(106, 153, 78);
-            ClientSize = new Size(1920, 1080);
+            ClientSize = new Size(1680, 810);
             Controls.Add(toolStripContainer1);
             FormBorderStyle = FormBorderStyle.None;
-            MainMenuStrip = menuStrip1;
-            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frmGestionMascota";
