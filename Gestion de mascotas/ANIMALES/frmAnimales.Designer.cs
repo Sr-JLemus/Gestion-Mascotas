@@ -44,10 +44,11 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
-            dataGridView1.Location = new Point(12, 12);
+            dataGridView1.Location = new Point(10, 9);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(723, 188);
+            dataGridView1.Size = new Size(678, 141);
             dataGridView1.TabIndex = 0;
             // 
             // Column1
@@ -87,9 +88,10 @@
             // 
             // btnAgregarAnimal
             // 
-            btnAgregarAnimal.Location = new Point(444, 409);
+            btnAgregarAnimal.Location = new Point(388, 307);
+            btnAgregarAnimal.Margin = new Padding(3, 2, 3, 2);
             btnAgregarAnimal.Name = "btnAgregarAnimal";
-            btnAgregarAnimal.Size = new Size(177, 29);
+            btnAgregarAnimal.Size = new Size(155, 22);
             btnAgregarAnimal.TabIndex = 1;
             btnAgregarAnimal.Text = "Agregar un animal";
             btnAgregarAnimal.UseVisualStyleBackColor = true;
@@ -97,9 +99,10 @@
             // 
             // btnSalirAnimales
             // 
-            btnSalirAnimales.Location = new Point(673, 409);
+            btnSalirAnimales.Location = new Point(589, 307);
+            btnSalirAnimales.Margin = new Padding(3, 2, 3, 2);
             btnSalirAnimales.Name = "btnSalirAnimales";
-            btnSalirAnimales.Size = new Size(94, 29);
+            btnSalirAnimales.Size = new Size(82, 22);
             btnSalirAnimales.TabIndex = 2;
             btnSalirAnimales.Text = "Salir";
             btnSalirAnimales.UseVisualStyleBackColor = true;
@@ -107,14 +110,20 @@
             // 
             // frmAnimales
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(106, 153, 78);
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(699, 341);
             Controls.Add(btnSalirAnimales);
             Controls.Add(btnAgregarAnimal);
             Controls.Add(dataGridView1);
+            Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
+            MaximumSize = new Size(715, 380);
+            MinimizeBox = false;
+            MinimumSize = new Size(715, 380);
             Name = "frmAnimales";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Animales";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

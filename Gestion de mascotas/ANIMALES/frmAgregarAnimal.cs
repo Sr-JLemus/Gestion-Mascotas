@@ -29,7 +29,7 @@ namespace Gestion_de_mascotas
             }
         }
         public string Sexo
-        { 
+        {
             get => rdbHembra.Checked ? "Hembra" : "Macho";
             set
             {
@@ -51,12 +51,53 @@ namespace Gestion_de_mascotas
         public frmAgregarAnimal() => InitializeComponent();
 
         private void btnAgregarA_Click(object sender, EventArgs e) => this.DialogResult = DialogResult.OK;
-       
+
 
         private void btnCancelarAnimal_Click(object sender, EventArgs e) => this.DialogResult = DialogResult.Cancel;
-    
 
+        private void frmAgregarAnimal_Load(object sender, EventArgs e)
+        {
+            btnAceptar.Enabled = false;
 
+            txtNombreAnimal.Focus();
+            txtNombreAnimal.TextChanged += ValidarFormulario;
+            cmbEspecie.TextChanged += ValidarFormulario;
+            mtxEdadAnimal.TextChanged += ValidarFormulario;
+            rdbHembra.CheckedChanged += ValidarFormulario;
+            rdbMacho.CheckedChanged += ValidarFormulario;
+            rdbLibre.CheckedChanged += ValidarFormulario;
+            rdbAdoptado.CheckedChanged += ValidarFormulario;
+        }
 
-}
+        private void ValidarFormulario(object? sender, EventArgs e)
+        {
+            bool nombreOk = !string.IsNullOrWhiteSpace(txtNombreAnimal.Text);
+            bool especieOk = !string.IsNullOrWhiteSpace(cmbEspecie.Text);
+            bool edadOk = mtxEdadAnimal.MaskFull && int.TryParse(mtxEdadAnimal.Text, out int edad) && edad >= 0;
+            bool sexoOk = rdbHembra.Checked || rdbMacho.Checked;
+            bool estadoOk = rdbLibre.Checked || rdbAdoptado.Checked;
+            errorProvider1.SetError(txtNombreAnimal, nombreOk ? "" : "El nombre es obligatorio.");
+            errorProvider1.SetError(cmbEspecie, especieOk ? "" : "La especie es obligatoria.");
+            errorProvider1.SetError(mtxEdadAnimal, edadOk ? "" : "La edad no es válida.");
+            errorProvider1.SetError(rdbHembra, sexoOk ? "" : "El sexo es obligatorio.");
+            errorProvider1.SetError(rdbLibre, estadoOk ? "" : "El estado es obligatorio.");
+            btnAceptar.Enabled = nombreOk && especieOk && edadOk && sexoOk && estadoOk;
+        }
+
+        private void mtxEdadAnimal_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            mtxEdadAnimal.SelectionStart = 0;
+        }
+
+        private void txtNombreAnimal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar))
+                return;
+
+            if (char.IsLetter(e.KeyChar) || char.IsWhiteSpace(e.KeyChar))
+                return;
+
+            e.Handled = true;
+        }
+    }
 }

@@ -51,7 +51,6 @@
             // dgvDonaciones
             // 
             dgvDonaciones.AllowUserToAddRows = false;
-            dgvDonaciones.AllowUserToDeleteRows = false;
             dgvDonaciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvDonaciones.Columns.AddRange(new DataGridViewColumn[] { ID, Donante, Telefono, Email, Monto, Fecha });
             dgvDonaciones.Dock = DockStyle.Fill;
@@ -134,7 +133,7 @@
             btnEditar.TabIndex = 3;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
-            btnEditar.Click += btnEditar_Click;
+            //btnEditar.Click += btnEditar_Click;
             // 
             // btnCancelar
             // 
@@ -223,7 +222,7 @@
             Name = "frmDonaciones";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Donaciones";
-            Shown += frmDonaciones_Shown;
+            //Shown += frmDonaciones_Shown;
             ((System.ComponentModel.ISupportInitialize)dgvDonaciones).EndInit();
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);

@@ -20,10 +20,11 @@ namespace Gestion_de_mascotas.DONATIVOS
             InitializeComponent();
         }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
+        public frmAgregarDonaciones()
         {
-
         }
+
+        private void btnAceptar_Click(object sender, EventArgs e) => this.DialogResult = DialogResult.OK;
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
