@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            btnAgregarAnimal = new Button();
-            btnSalirAnimales = new Button();
-            btnEliminarAnimales = new Button();
-            btnEditarAnimal = new Button();
             Column6 = new DataGridViewTextBoxColumn();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
+            btnAgregarAnimal = new Button();
+            btnSalirAnimales = new Button();
+            btnEliminarAnimales = new Button();
+            btnEditarAnimal = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -52,46 +52,6 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(775, 188);
             dataGridView1.TabIndex = 0;
-            // 
-            // btnAgregarAnimal
-            // 
-            btnAgregarAnimal.Location = new Point(218, 409);
-            btnAgregarAnimal.Name = "btnAgregarAnimal";
-            btnAgregarAnimal.Size = new Size(177, 29);
-            btnAgregarAnimal.TabIndex = 1;
-            btnAgregarAnimal.Text = "Agregar un animal";
-            btnAgregarAnimal.UseVisualStyleBackColor = true;
-            btnAgregarAnimal.Click += btnAgregarAnimal_Click;
-            // 
-            // btnSalirAnimales
-            // 
-            btnSalirAnimales.Location = new Point(673, 409);
-            btnSalirAnimales.Name = "btnSalirAnimales";
-            btnSalirAnimales.Size = new Size(94, 29);
-            btnSalirAnimales.TabIndex = 2;
-            btnSalirAnimales.Text = "Salir";
-            btnSalirAnimales.UseVisualStyleBackColor = true;
-            btnSalirAnimales.Click += btnSalirAnimales_Click;
-            // 
-            // btnEliminarAnimales
-            // 
-            btnEliminarAnimales.Location = new Point(562, 409);
-            btnEliminarAnimales.Name = "btnEliminarAnimales";
-            btnEliminarAnimales.Size = new Size(94, 29);
-            btnEliminarAnimales.TabIndex = 3;
-            btnEliminarAnimales.Text = "Eliminar";
-            btnEliminarAnimales.UseVisualStyleBackColor = true;
-            btnEliminarAnimales.Click += btnEliminarAnimales_Click;
-            // 
-            // btnEditarAnimal
-            // 
-            btnEditarAnimal.Location = new Point(432, 409);
-            btnEditarAnimal.Name = "btnEditarAnimal";
-            btnEditarAnimal.Size = new Size(94, 29);
-            btnEditarAnimal.TabIndex = 4;
-            btnEditarAnimal.Text = "Editar";
-            btnEditarAnimal.UseVisualStyleBackColor = true;
-            btnEditarAnimal.Click += btnEditarAnimal_Click;
             // 
             // Column6
             // 
@@ -135,6 +95,46 @@
             Column5.Name = "Column5";
             Column5.Width = 125;
             // 
+            // btnAgregarAnimal
+            // 
+            btnAgregarAnimal.Location = new Point(232, 409);
+            btnAgregarAnimal.Name = "btnAgregarAnimal";
+            btnAgregarAnimal.Size = new Size(177, 29);
+            btnAgregarAnimal.TabIndex = 1;
+            btnAgregarAnimal.Text = "Agregar un animal";
+            btnAgregarAnimal.UseVisualStyleBackColor = true;
+            btnAgregarAnimal.Click += btnAgregarAnimal_Click;
+            // 
+            // btnSalirAnimales
+            // 
+            btnSalirAnimales.Location = new Point(673, 409);
+            btnSalirAnimales.Name = "btnSalirAnimales";
+            btnSalirAnimales.Size = new Size(94, 29);
+            btnSalirAnimales.TabIndex = 2;
+            btnSalirAnimales.Text = "Salir";
+            btnSalirAnimales.UseVisualStyleBackColor = true;
+            btnSalirAnimales.Click += btnSalirAnimales_Click;
+            // 
+            // btnEliminarAnimales
+            // 
+            btnEliminarAnimales.Location = new Point(562, 409);
+            btnEliminarAnimales.Name = "btnEliminarAnimales";
+            btnEliminarAnimales.Size = new Size(94, 29);
+            btnEliminarAnimales.TabIndex = 3;
+            btnEliminarAnimales.Text = "Eliminar";
+            btnEliminarAnimales.UseVisualStyleBackColor = true;
+            btnEliminarAnimales.Click += btnEliminarAnimales_Click;
+            // 
+            // btnEditarAnimal
+            // 
+            btnEditarAnimal.Location = new Point(432, 409);
+            btnEditarAnimal.Name = "btnEditarAnimal";
+            btnEditarAnimal.Size = new Size(94, 29);
+            btnEditarAnimal.TabIndex = 4;
+            btnEditarAnimal.Text = "Editar";
+            btnEditarAnimal.UseVisualStyleBackColor = true;
+            btnEditarAnimal.Click += btnEditarAnimal_Click;
+            // 
             // frmAnimales
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -153,6 +153,7 @@
             Name = "frmAnimales";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Animales";
+            Load += btnEditarAnimal_Click;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }

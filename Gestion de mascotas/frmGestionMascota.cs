@@ -24,7 +24,7 @@ namespace Gestion_de_mascotas
 
         private void dONATIVOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //abrir formulario donaciones
+            
             frmDonaciones frmDonaciones = new frmDonaciones();
             frmDonaciones.ShowDialog();
             frmDonaciones.Dispose();
