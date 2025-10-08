@@ -17,7 +17,6 @@ namespace Gestion_de_mascotas
         public frmDonaciones()
         {
             InitializeComponent();
-            this.AutoScaleMode = AutoScaleMode.Dpi;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -26,12 +25,13 @@ namespace Gestion_de_mascotas
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 dgvDonaciones.Rows.Add(
-                    frm.Donaciones.ID,
-                    frm.Donaciones.Donante,
-                    frm.Donaciones.Telefono,
-                    frm.Donaciones.Email,
-                    frm.Donaciones.Monto,
-                    frm.Donaciones.Fecha
+                    frm.ID,
+                    frm.Donante,
+                    frm.Telefono,
+                    frm.Email,
+                    frm.Monto,
+                    frm.Fecha.ToShortDateString()
+
                 );
             }
         }

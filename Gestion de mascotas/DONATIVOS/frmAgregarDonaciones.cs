@@ -13,16 +13,27 @@ namespace Gestion_de_mascotas.DONATIVOS
 {
     public partial class frmAgregarDonaciones : Form
     {
-        public Donaciones Donaciones { get; internal set; }
-
-        public frmAgregarDonaciones(RepositorioDonaciones repo)
+        public string ID { get => txtID.Text; set => txtID.Text = value; }
+        public string Donante { get => txtDonante.Text; set => txtDonante.Text = value; }
+        public string Telefono { get => mtxTelefono.Text; set => mtxTelefono.Text = value; }
+        public string Email { get => txtEmail.Text; set => txtEmail.Text = value; }
+        public decimal Monto
         {
-            InitializeComponent();
+            get
+            {
+                decimal monto;
+                if (decimal.TryParse(txtMonto.Text, out monto))
+                    return monto;
+                return 0;
+            }
+            set
+            {
+                txtMonto.Text = value.ToString("F2");
+            }
         }
+        public DateTime Fecha { get => dtpFechaDonacion.Value; set => dtpFechaDonacion.Value = value; }
+        public frmAgregarDonaciones() => InitializeComponent();
 
-        public frmAgregarDonaciones()
-        {
-        }
 
         private void btnAceptar_Click(object sender, EventArgs e) => this.DialogResult = DialogResult.OK;
 
