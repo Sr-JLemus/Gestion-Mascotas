@@ -35,7 +35,7 @@ namespace Gestion_de_mascotas
                    frm.Estado
                );
 
-                contadorID++; // Incrementar para el próximo ID
+                contadorID++; 
 
 
                 if (frm.ShowDialog() == DialogResult.OK)
