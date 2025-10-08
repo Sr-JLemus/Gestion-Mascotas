@@ -52,44 +52,44 @@
             // lblAnimal
             // 
             lblAnimal.AutoSize = true;
-            lblAnimal.Font = new Font("Sitka Banner", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblAnimal.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
             lblAnimal.ForeColor = Color.Black;
             lblAnimal.Location = new Point(162, 58);
             lblAnimal.Name = "lblAnimal";
-            lblAnimal.Size = new Size(119, 39);
+            lblAnimal.Size = new Size(102, 25);
             lblAnimal.TabIndex = 0;
             lblAnimal.Text = "Animal N.";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Sitka Banner", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(106, 153, 78);
+            label2.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
+            label2.ForeColor = Color.FromArgb(237, 237, 237);
             label2.Location = new Point(24, 115);
             label2.Name = "label2";
-            label2.Size = new Size(86, 33);
+            label2.Size = new Size(80, 25);
             label2.TabIndex = 1;
             label2.Text = "Nombre";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Sitka Banner", 13.7999992F);
-            label3.ForeColor = Color.FromArgb(106, 153, 78);
+            label3.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
+            label3.ForeColor = Color.FromArgb(237, 237, 237);
             label3.Location = new Point(24, 185);
             label3.Name = "label3";
-            label3.Size = new Size(78, 33);
+            label3.Size = new Size(77, 25);
             label3.TabIndex = 2;
             label3.Text = "Especie";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Sitka Banner", 13.7999992F);
-            label4.ForeColor = Color.FromArgb(106, 153, 78);
+            label4.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
+            label4.ForeColor = Color.FromArgb(237, 237, 237);
             label4.Location = new Point(24, 251);
             label4.Name = "label4";
-            label4.Size = new Size(132, 33);
+            label4.Size = new Size(130, 25);
             label4.TabIndex = 3;
             label4.Text = "Edad (meses)";
             label4.Click += label4_Click;
@@ -97,22 +97,22 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Sitka Banner", 13.7999992F);
-            label5.ForeColor = Color.FromArgb(106, 153, 78);
+            label5.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
+            label5.ForeColor = Color.FromArgb(237, 237, 237);
             label5.Location = new Point(24, 320);
             label5.Name = "label5";
-            label5.Size = new Size(56, 33);
+            label5.Size = new Size(51, 25);
             label5.TabIndex = 4;
             label5.Text = "Sexo";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Sitka Banner", 13.7999992F);
-            label6.ForeColor = Color.FromArgb(106, 153, 78);
+            label6.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
+            label6.ForeColor = Color.FromArgb(237, 237, 237);
             label6.Location = new Point(24, 392);
             label6.Name = "label6";
-            label6.Size = new Size(74, 33);
+            label6.Size = new Size(71, 25);
             label6.TabIndex = 5;
             label6.Text = "Estado";
             // 
@@ -147,9 +147,11 @@
             // rdbHembra
             // 
             rdbHembra.AutoSize = true;
+            rdbHembra.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
+            rdbHembra.ForeColor = Color.FromArgb(237, 237, 237);
             rdbHembra.Location = new Point(121, 317);
             rdbHembra.Name = "rdbHembra";
-            rdbHembra.Size = new Size(84, 24);
+            rdbHembra.Size = new Size(103, 29);
             rdbHembra.TabIndex = 9;
             rdbHembra.TabStop = true;
             rdbHembra.Text = "Hembra";
@@ -158,9 +160,11 @@
             // rdbMacho
             // 
             rdbMacho.AutoSize = true;
+            rdbMacho.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
+            rdbMacho.ForeColor = Color.FromArgb(237, 237, 237);
             rdbMacho.Location = new Point(242, 316);
             rdbMacho.Name = "rdbMacho";
-            rdbMacho.Size = new Size(75, 24);
+            rdbMacho.Size = new Size(90, 29);
             rdbMacho.TabIndex = 10;
             rdbMacho.TabStop = true;
             rdbMacho.Text = "Macho";
@@ -194,9 +198,11 @@
             // chkAdoptado
             // 
             chkAdoptado.AutoSize = true;
+            chkAdoptado.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
+            chkAdoptado.ForeColor = Color.FromArgb(237, 237, 237);
             chkAdoptado.Location = new Point(121, 401);
             chkAdoptado.Name = "chkAdoptado";
-            chkAdoptado.Size = new Size(99, 24);
+            chkAdoptado.Size = new Size(116, 29);
             chkAdoptado.TabIndex = 14;
             chkAdoptado.Text = "Adoptado";
             chkAdoptado.UseVisualStyleBackColor = true;
@@ -204,9 +210,11 @@
             // chkLibre
             // 
             chkLibre.AutoSize = true;
+            chkLibre.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
+            chkLibre.ForeColor = Color.FromArgb(237, 237, 237);
             chkLibre.Location = new Point(263, 401);
             chkLibre.Name = "chkLibre";
-            chkLibre.Size = new Size(64, 24);
+            chkLibre.Size = new Size(79, 29);
             chkLibre.TabIndex = 15;
             chkLibre.Text = "Libre";
             chkLibre.UseVisualStyleBackColor = true;
@@ -214,11 +222,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Sitka Banner", 16.1999989F);
-            label1.ForeColor = Color.FromArgb(106, 153, 78);
+            label1.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
+            label1.ForeColor = Color.FromArgb(237, 237, 237);
             label1.Location = new Point(30, 58);
             label1.Name = "label1";
-            label1.Size = new Size(132, 39);
+            label1.Size = new Size(118, 25);
             label1.TabIndex = 16;
             label1.Text = "ANIMAL N.";
             // 
@@ -226,6 +234,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(106, 153, 78);
             ClientSize = new Size(649, 452);
             Controls.Add(label1);
             Controls.Add(chkLibre);

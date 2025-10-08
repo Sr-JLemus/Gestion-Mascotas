@@ -13,7 +13,7 @@ namespace Gestion_de_mascotas
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmAnimales());
+            Application.Run(new frmEventos());
         }
     }
 }

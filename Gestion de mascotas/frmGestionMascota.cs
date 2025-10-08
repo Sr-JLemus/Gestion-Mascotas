@@ -32,9 +32,16 @@ namespace Gestion_de_mascotas
 
         private void aNIMALESToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAnimales frmAnimales = new frmAnimales(); 
+            frmAnimales frmAnimales = new frmAnimales();
             frmAnimales.ShowDialog();
             frmAnimales.Dispose();
+        }
+
+        private void eVENTOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEventos frmEventos = new frmEventos();
+            frmEventos.ShowDialog();
+            frmEventos.Dispose();
         }
     }
 }
