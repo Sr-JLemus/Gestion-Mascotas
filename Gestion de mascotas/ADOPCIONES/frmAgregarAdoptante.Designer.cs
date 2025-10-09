@@ -68,45 +68,55 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
+            label1.ForeColor = SystemColors.ControlLightLight;
             label1.Location = new Point(22, 75);
             label1.Name = "label1";
-            label1.Size = new Size(54, 15);
+            label1.Size = new Size(69, 21);
             label1.TabIndex = 2;
             label1.Text = "Nombre:";
             // 
             // lblID
             // 
             lblID.AutoSize = true;
+            lblID.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
+            lblID.ForeColor = SystemColors.ControlLightLight;
             lblID.Location = new Point(21, 30);
             lblID.Name = "lblID";
-            lblID.Size = new Size(74, 15);
+            lblID.Size = new Size(98, 21);
             lblID.TabIndex = 3;
             lblID.Text = "ID adopción:";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
+            label2.ForeColor = SystemColors.ControlLightLight;
             label2.Location = new Point(22, 122);
             label2.Name = "label2";
-            label2.Size = new Size(55, 15);
+            label2.Size = new Size(75, 21);
             label2.TabIndex = 4;
             label2.Text = "Telefono:";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
+            label3.ForeColor = SystemColors.ControlLightLight;
             label3.Location = new Point(22, 172);
             label3.Name = "label3";
-            label3.Size = new Size(42, 15);
+            label3.Size = new Size(62, 21);
             label3.TabIndex = 5;
             label3.Text = "E mail:";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
+            label4.ForeColor = SystemColors.ControlLightLight;
             label4.Location = new Point(22, 223);
             label4.Name = "label4";
-            label4.Size = new Size(103, 15);
+            label4.Size = new Size(137, 21);
             label4.TabIndex = 6;
             label4.Text = "ID a quien adopta:";
             // 
