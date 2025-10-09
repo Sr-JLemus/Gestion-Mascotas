@@ -29,26 +29,59 @@
         private void InitializeComponent()
         {
             dgvAdopcion = new DataGridView();
-            btnAgregar = new Button();
-            btnEditar = new Button();
-            btnSalir = new Button();
-            btnEliminar = new Button();
             clmIDAdoptante = new DataGridViewTextBoxColumn();
             clmNombreAdoptante = new DataGridViewTextBoxColumn();
             clmTelefonoAdoptante = new DataGridViewTextBoxColumn();
             clmEmailAdoptante = new DataGridViewTextBoxColumn();
             clmIDAdoptado = new DataGridViewTextBoxColumn();
+            btnAgregar = new Button();
+            btnEditar = new Button();
+            btnSalir = new Button();
+            btnEliminar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvAdopcion).BeginInit();
             SuspendLayout();
             // 
             // dgvAdopcion
             // 
+            dgvAdopcion.AllowUserToAddRows = false;
             dgvAdopcion.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvAdopcion.Columns.AddRange(new DataGridViewColumn[] { clmIDAdoptante, clmNombreAdoptante, clmTelefonoAdoptante, clmEmailAdoptante, clmIDAdoptado });
             dgvAdopcion.Location = new Point(12, 12);
             dgvAdopcion.Name = "dgvAdopcion";
             dgvAdopcion.Size = new Size(676, 194);
             dgvAdopcion.TabIndex = 0;
+            // 
+            // clmIDAdoptante
+            // 
+            clmIDAdoptante.HeaderText = "ID";
+            clmIDAdoptante.Name = "clmIDAdoptante";
+            clmIDAdoptante.ReadOnly = true;
+            // 
+            // clmNombreAdoptante
+            // 
+            clmNombreAdoptante.HeaderText = "Nombre Adoptante";
+            clmNombreAdoptante.Name = "clmNombreAdoptante";
+            clmNombreAdoptante.ReadOnly = true;
+            clmNombreAdoptante.Width = 150;
+            // 
+            // clmTelefonoAdoptante
+            // 
+            clmTelefonoAdoptante.HeaderText = "Telefono";
+            clmTelefonoAdoptante.Name = "clmTelefonoAdoptante";
+            clmTelefonoAdoptante.ReadOnly = true;
+            // 
+            // clmEmailAdoptante
+            // 
+            clmEmailAdoptante.HeaderText = "E mail";
+            clmEmailAdoptante.Name = "clmEmailAdoptante";
+            clmEmailAdoptante.ReadOnly = true;
+            clmEmailAdoptante.Width = 150;
+            // 
+            // clmIDAdoptado
+            // 
+            clmIDAdoptado.HeaderText = "ID Adoptado:";
+            clmIDAdoptado.Name = "clmIDAdoptado";
+            clmIDAdoptado.ReadOnly = true;
             // 
             // btnAgregar
             // 
@@ -89,38 +122,6 @@
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.Click += btnEliminar_Click;
-            // 
-            // clmIDAdoptante
-            // 
-            clmIDAdoptante.HeaderText = "ID";
-            clmIDAdoptante.Name = "clmIDAdoptante";
-            clmIDAdoptante.ReadOnly = true;
-            // 
-            // clmNombreAdoptante
-            // 
-            clmNombreAdoptante.HeaderText = "Nombre Adoptante";
-            clmNombreAdoptante.Name = "clmNombreAdoptante";
-            clmNombreAdoptante.ReadOnly = true;
-            clmNombreAdoptante.Width = 150;
-            // 
-            // clmTelefonoAdoptante
-            // 
-            clmTelefonoAdoptante.HeaderText = "Telefono";
-            clmTelefonoAdoptante.Name = "clmTelefonoAdoptante";
-            clmTelefonoAdoptante.ReadOnly = true;
-            // 
-            // clmEmailAdoptante
-            // 
-            clmEmailAdoptante.HeaderText = "E mail";
-            clmEmailAdoptante.Name = "clmEmailAdoptante";
-            clmEmailAdoptante.ReadOnly = true;
-            clmEmailAdoptante.Width = 150;
-            // 
-            // clmIDAdoptado
-            // 
-            clmIDAdoptado.HeaderText = "ID Adoptado:";
-            clmIDAdoptado.Name = "clmIDAdoptado";
-            clmIDAdoptado.ReadOnly = true;
             // 
             // frmAdopcion
             // 

@@ -70,10 +70,10 @@ namespace Gestion_de_mascotas
                     fila.Cells[3].Value = frm.EmailAdoptante;
                     fila.Cells[4].Value = frm.IDAdoptado;
                 }
-                else
-                {
-                    MessageBox.Show("Seleccione una fila para editar.");
-                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila para editar.");
             }
         }
     }
