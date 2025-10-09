@@ -43,5 +43,12 @@ namespace Gestion_de_mascotas
             frmEventos.ShowDialog();
             frmEventos.Dispose();
         }
+
+        private void aDOPCIÓNToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAdopcion frmAdopcion = new frmAdopcion();
+            frmAdopcion.ShowDialog();
+            frmAdopcion.Dispose();
+        }
     }
 }

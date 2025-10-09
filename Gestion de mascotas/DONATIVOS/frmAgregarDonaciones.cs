@@ -57,7 +57,7 @@ namespace Gestion_de_mascotas.DONATIVOS
 
         }
 
-        private void ValidarFormulario(object? sender, EventArgs e)
+        public void ValidarFormulario(object? sender, EventArgs e)
         {
             bool idOk = !string.IsNullOrWhiteSpace(txtDonante.Text);
             bool donanteOK = !string.IsNullOrWhiteSpace(txtDonante.Text);

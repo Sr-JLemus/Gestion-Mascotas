@@ -104,5 +104,39 @@ namespace Gestion_de_mascotas
 
        
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+                
+                frmAgregarAnimal frm = new frmAgregarAnimal();
+
+                
+                frm.Nombre = fila.Cells[1].Value.ToString();
+                frm.Edad = Convert.ToInt32(fila.Cells[4].Value);
+                frm.Sexo = fila.Cells[3].Value.ToString();
+                frm.Especie = fila.Cells[2].Value.ToString();
+                frm.Estado = fila.Cells[5].Value.ToString();
+                frm.ID = fila.Cells[6].Value.ToString();
+
+                
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    
+                    fila.Cells[0].Value = frm.Nombre;
+                    fila.Cells[1].Value = frm.Edad;
+                    fila.Cells[2].Value = frm.Sexo;
+                    fila.Cells[3].Value = frm.Especie;
+                    fila.Cells[4].Value = frm.Estado;
+                    fila.Cells[5].Value = frm.ID;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila para editar.");
+            }
+        }
+=======
+>>>>>>> 9055425679f86dfef4f05e2f4a403a646db1e9c1
+=======
+>>>>>>> 9055425679f86dfef4f05e2f4a403a646db1e9c1
     }
 }

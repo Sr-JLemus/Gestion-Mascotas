@@ -130,6 +130,7 @@
             aDOPCIÓNToolStripMenuItem.Name = "aDOPCIÓNToolStripMenuItem";
             aDOPCIÓNToolStripMenuItem.Size = new Size(201, 200);
             aDOPCIÓNToolStripMenuItem.Text = "ADOPCIÓN";
+            aDOPCIÓNToolStripMenuItem.Click += aDOPCIÓNToolStripMenuItem_Click;
             // 
             // dONATIVOSToolStripMenuItem
             // 
@@ -168,7 +169,7 @@
             label1.ForeColor = Color.FromArgb(237, 237, 237);
             label1.Location = new Point(456, 362);
             label1.Name = "label1";
-            label1.Size = new Size(156, 34);
+            label1.Size = new Size(120, 26);
             label1.TabIndex = 3;
             label1.Text = "ANIMALES";
             // 
@@ -179,7 +180,7 @@
             label2.ForeColor = Color.FromArgb(237, 237, 237);
             label2.Location = new Point(1200, 362);
             label2.Name = "label2";
-            label2.Size = new Size(184, 34);
+            label2.Size = new Size(142, 26);
             label2.TabIndex = 4;
             label2.Text = "ADOPCIONES";
             // 
@@ -190,7 +191,7 @@
             label3.ForeColor = Color.FromArgb(237, 237, 237);
             label3.Location = new Point(456, 742);
             label3.Name = "label3";
-            label3.Size = new Size(169, 34);
+            label3.Size = new Size(130, 26);
             label3.TabIndex = 5;
             label3.Text = "DONATIVOS";
             // 
@@ -201,7 +202,7 @@
             label4.ForeColor = Color.FromArgb(237, 237, 237);
             label4.Location = new Point(1242, 742);
             label4.Name = "label4";
-            label4.Size = new Size(136, 34);
+            label4.Size = new Size(106, 26);
             label4.TabIndex = 6;
             label4.Text = "EVENTOS";
             // 

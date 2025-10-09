@@ -52,9 +52,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
             label2.ForeColor = Color.FromArgb(237, 237, 237);
-            label2.Location = new Point(27, 102);
+            label2.Location = new Point(24, 76);
             label2.Name = "label2";
-            label2.Size = new Size(85, 25);
+            label2.Size = new Size(69, 21);
             label2.TabIndex = 5;
             label2.Text = "Donante";
             // 
@@ -63,9 +63,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
             label3.ForeColor = Color.FromArgb(237, 237, 237);
-            label3.Location = new Point(27, 160);
+            label3.Location = new Point(24, 120);
             label3.Name = "label3";
-            label3.Size = new Size(86, 25);
+            label3.Size = new Size(70, 21);
             label3.TabIndex = 6;
             label3.Text = "Teléfono";
             // 
@@ -74,9 +74,9 @@
             label4.AutoSize = true;
             label4.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
             label4.ForeColor = Color.FromArgb(237, 237, 237);
-            label4.Location = new Point(27, 219);
+            label4.Location = new Point(24, 164);
             label4.Name = "label4";
-            label4.Size = new Size(65, 25);
+            label4.Size = new Size(53, 21);
             label4.TabIndex = 7;
             label4.Text = "Email";
             // 
@@ -85,9 +85,9 @@
             label5.AutoSize = true;
             label5.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
             label5.ForeColor = Color.FromArgb(237, 237, 237);
-            label5.Location = new Point(27, 285);
+            label5.Location = new Point(24, 214);
             label5.Name = "label5";
-            label5.Size = new Size(67, 25);
+            label5.Size = new Size(55, 21);
             label5.TabIndex = 8;
             label5.Text = "Monto";
             // 
@@ -96,9 +96,9 @@
             label6.AutoSize = true;
             label6.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
             label6.ForeColor = Color.FromArgb(237, 237, 237);
-            label6.Location = new Point(27, 344);
+            label6.Location = new Point(24, 258);
             label6.Name = "label6";
-            label6.Size = new Size(63, 25);
+            label6.Size = new Size(51, 21);
             label6.TabIndex = 9;
             label6.Text = "Fecha";
             // 
@@ -107,64 +107,71 @@
             label1.AutoSize = true;
             label1.Font = new Font("Bodoni MT", 12.2F, FontStyle.Bold);
             label1.ForeColor = Color.FromArgb(237, 237, 237);
-            label1.Location = new Point(27, 48);
+            label1.Location = new Point(24, 36);
             label1.Name = "label1";
-            label1.Size = new Size(35, 25);
+            label1.Size = new Size(28, 21);
             label1.TabIndex = 4;
             label1.Text = "ID";
             // 
             // txtDonante
             // 
-            txtDonante.Location = new Point(128, 100);
+            txtDonante.Location = new Point(112, 75);
+            txtDonante.Margin = new Padding(3, 2, 3, 2);
             txtDonante.Name = "txtDonante";
-            txtDonante.Size = new Size(314, 27);
+            txtDonante.Size = new Size(275, 23);
             txtDonante.TabIndex = 10;
             txtDonante.KeyPress += txtDonante_KeyPress;
             // 
             // mtxTelefono
             // 
-            mtxTelefono.Location = new Point(128, 158);
+            mtxTelefono.Location = new Point(112, 118);
+            mtxTelefono.Margin = new Padding(3, 2, 3, 2);
             mtxTelefono.Mask = "0000-0000";
             mtxTelefono.Name = "mtxTelefono";
-            mtxTelefono.Size = new Size(124, 27);
+            mtxTelefono.Size = new Size(109, 23);
             mtxTelefono.TabIndex = 11;
             mtxTelefono.Click += mtxTelefono_Click;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(128, 217);
+            txtEmail.Location = new Point(112, 163);
+            txtEmail.Margin = new Padding(3, 2, 3, 2);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(314, 27);
+            txtEmail.Size = new Size(275, 23);
             txtEmail.TabIndex = 12;
             // 
             // txtMonto
             // 
-            txtMonto.Location = new Point(128, 283);
+            txtMonto.Location = new Point(112, 212);
+            txtMonto.Margin = new Padding(3, 2, 3, 2);
             txtMonto.Name = "txtMonto";
-            txtMonto.Size = new Size(124, 27);
+            txtMonto.Size = new Size(109, 23);
             txtMonto.TabIndex = 13;
             txtMonto.KeyPress += txtMonto_KeyPress;
             // 
             // dtpFechaDonacion
             // 
             dtpFechaDonacion.Format = DateTimePickerFormat.Short;
-            dtpFechaDonacion.Location = new Point(128, 341);
+            dtpFechaDonacion.Location = new Point(112, 256);
+            dtpFechaDonacion.Margin = new Padding(3, 2, 3, 2);
             dtpFechaDonacion.Name = "dtpFechaDonacion";
-            dtpFechaDonacion.Size = new Size(124, 27);
+            dtpFechaDonacion.Size = new Size(109, 23);
             dtpFechaDonacion.TabIndex = 14;
             // 
             // txtID
             // 
-            txtID.Location = new Point(128, 46);
+            txtID.Location = new Point(112, 34);
+            txtID.Margin = new Padding(3, 2, 3, 2);
             txtID.Name = "txtID";
-            txtID.Size = new Size(124, 27);
+            txtID.Size = new Size(109, 23);
             txtID.TabIndex = 15;
             // 
             // btnAceptar
             // 
-            btnAceptar.Location = new Point(106, 408);
+            btnAceptar.Location = new Point(112, 306);
+            btnAceptar.Margin = new Padding(3, 2, 3, 2);
             btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(94, 29);
+            btnAceptar.Size = new Size(82, 22);
             btnAceptar.TabIndex = 16;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = true;
@@ -172,9 +179,10 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(274, 408);
+            btnCancelar.Location = new Point(252, 306);
+            btnCancelar.Margin = new Padding(3, 2, 3, 2);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(94, 29);
+            btnCancelar.Size = new Size(82, 22);
             btnCancelar.TabIndex = 17;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
@@ -187,10 +195,10 @@
             // 
             // frmAgregarDonaciones
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(106, 153, 78);
-            ClientSize = new Size(488, 465);
+            ClientSize = new Size(427, 349);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
             Controls.Add(txtID);
@@ -206,6 +214,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.Fixed3D;
+            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frmAgregarDonaciones";
